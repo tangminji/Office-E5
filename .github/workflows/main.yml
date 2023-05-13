@@ -4,8 +4,8 @@
 name: Office E5
 
 on:
-  schedule:
-    - cron: '0/20 * * * ?'
+#   schedule:
+#     - cron: '0/20 * * * ?'
   release:
     types: [published]
   watch:
@@ -44,8 +44,8 @@ jobs:
         git config --global user.email "$EMAIL"
         git add .
         git commit -m "update log" -a
-    - name: Push log
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.TOKEN }}
-        branch: main
+#     - name: Push log
+#       uses: ad-m/github-push-action@master
+#       with:
+#         github_token: ${{ secrets.TOKEN }}
+#         branch: main
